@@ -18,6 +18,11 @@ int main(void)
         row3_sum = c1 + c2 + c3 + c4;
         row4_sum = d1 + d2 + d3 + d4;
 
+        column1_sum = a1 + b1 + c1 + d1;
+        column2_sum = a2 + b2 + c2 + d2;
+        column3_sum = a3 + b3 + c3 + d3;
+        column4_sum = a4 + b4 + c4 + d4;
+
     printf("%2d %2d %2d %2d\n%2d %2d %2d %2d\n%2d %2d %2d %2d\n%2d %2d %2d %2d\n",
             a1, a2, a3, a4,
             b1, b2, b3, b4,
