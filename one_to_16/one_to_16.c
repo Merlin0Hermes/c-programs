@@ -37,7 +37,7 @@ int main(void)
     
     printf("Row sums: %d %d %d %d\n", row1_sum, row2_sum, row3_sum, row4_sum);
     printf("Column sums: %d %d %d %d\n", column1_sum, column2_sum, column3_sum, column4_sum);
-    printf("Diagonal sums: %d %d", diagonal_sum1, diagonal_sum2);
+    printf("Diagonal sums: %d %d\n", diagonal_sum1, diagonal_sum2);
 
     
 
