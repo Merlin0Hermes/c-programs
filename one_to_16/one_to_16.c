@@ -11,7 +11,10 @@ int main(void)
 
     printf("Enter the numbers from 1 to 16 in any order: ");
     scanf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", 
-        a1, a2, a3, a4, b1, b2, b3, b4, c1, c2, c3, c4, d1, d2, d3, d4);
+            &a1, &a2, &a3, &a4, 
+            &b1, &b2, &b3, &b4, 
+            &c1, &c2, &c3, &c4, 
+            &d1, &d2, &d3, &d4);
 
     row1_sum = a1 + a2 + a3 + a4;
     row2_sum = b1 + b2 + b3 + b4;
