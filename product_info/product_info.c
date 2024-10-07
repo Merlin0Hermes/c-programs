@@ -14,4 +14,10 @@ int main(void)
 
     printf("Enter purchase date (mm/dd/yyyy): ");
     scanf("%d/%d/%d", &month, &day, &year);
+
+    printf("Item\tUnit\tPurchase\n");
+    printf("\tPrice\tDate\n");
+    printf("%d\t$%-7.2f\t%.2d/%.2d/%.4d");
+
+    return 0;
 }
