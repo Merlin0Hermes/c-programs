@@ -31,6 +31,10 @@ int main(void)
             b1, b2, b3, b4,
             c1, c2, c3, c4,
             d1, d2, d3, d4);
+    
+    printf("Row sums: %d %d %d %d\n", row1_sum, row2_sum, row3_sum, row4_sum);
+    printf("Column sums: %d %d %d %d\n", column1_sum, column2_sum, column3_sum, column4_sum);
+    printf("Diagonal sums: %d %d", diagonal_sum1, diagonal_sum2);
 
     
 
