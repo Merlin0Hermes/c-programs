@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+void get_matrix(int matrix[10][10], int m, int n);
+
+
 int main(void)
 {
     int matrixA[10][10];
@@ -17,30 +20,12 @@ int main(void)
     }
 
     printf("Enter first matrix\n");
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            printf("Enter element of row %d column %d: ", i + 1, j + 1);
-            scanf("%d", &matrixA[i][j]);
-        }
 
-    }
+    get_matrix(matrixA, m, n);
 
     printf("Enter second matrix\n");
 
-    for (i = 0; i < m; i++)
-    {
-
-        for (j = 0; j < n; j++)
-        {
-            printf("Enter element of row %d column %d: ", i + 1, j + 1);
-            scanf("%d", &matrixB[i][j]);
-            
-        }
-       
-
-    }
+    get_matrix(matrixB, m, n);
 
     for (i = 0; i < m; i++)
     {
@@ -50,7 +35,6 @@ int main(void)
             matrix_sum[i][j] = 0;
             matrix_sum[i][j] += matrixA[i][j] + matrixB[i][j];
         }
-        
 
     }
 
@@ -62,11 +46,25 @@ int main(void)
             printf("%d\t", matrix_sum[i][j]);
         }
         printf("\n");
-        
 
     }
 
-
     return 0;
-
 }
+
+void get_matrix(int matrix[10][10], int m, int n)
+{
+    int i, j;
+
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            printf("Enter element of row %d column %d: ", i + 1, j + 1);
+            scanf("%d", &matrix[i][j]);
+        }
+       
+    }
+   
+}
+
