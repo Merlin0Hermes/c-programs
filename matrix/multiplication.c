@@ -2,21 +2,21 @@
 #include <stdio.h>
 
 void get_matrix(int matrix[10][10], int m, int n);
-void multiply(int matrixA[10][10], int matrixB[10][10], int result[10][10], int m1, int n1, int m2, int n2);
+void multiply(int matrixA[10][10], int matrixB[10][10], int result[10][10], int first_row, int first_column, int second_row, int second_column);
 
 
 int main(void)
 {
     int matrixA[10][10], matrixB[10][10], result[10][10];
-    int m1, n1, m2, n2;
+    int first_row, first_column, second_row, second_column;
     int i, j;
 
     printf("Enter number of rows and columns of first matrx (m n): ");
-    scanf("%d %d", &m1, &n1);
+    scanf("%d %d", &first_row, &first_column);
     printf("Enter number of rows and columns of second matrx (m n): ");
-    scanf("%d %d", &m2, &n2);
+    scanf("%d %d", &second_row, &second_column);
 
-    if (m1 > 10 || n1 > 10 || n2 > 10 || m1 > 10)
+    if (first_row > 10 || first_column > 10 || second_column > 10 || first_row > 10)
     {
         printf("Maximum size of row or column is 10.\n");
         return 1;
@@ -24,7 +24,7 @@ int main(void)
 
 
 
-    if (n1 != m2)
+    if (first_column != second_row)
     {
         printf("Cannot multiply: ");
         printf("Number of columns first matrix is not equal to number of rows of second matrix.\n");
@@ -33,16 +33,16 @@ int main(void)
 
 
     printf("Enter first matrix: \n");
-    get_matrix(matrixA, m1, n1);
+    get_matrix(matrixA, first_row, first_column);
 
     printf("Enter second matrix: \n");
-    get_matrix(matrixB, m2, n2);
+    get_matrix(matrixB, second_row, second_column);
 
-    multiply(matrixA, matrixB, result, m1, n1, m2, n1);
+    multiply(matrixA, matrixB, result, first_row, first_column, second_row, first_column);
 
-    for (i = 0; i < m1; i++)
+    for (i = 0; i < first_row; i++)
     {
-        for (j = 0; j < n2; j++)
+        for (j = 0; j < second_column; j++)
         {
             printf("%d ", result[i][j]);
         }
@@ -54,23 +54,23 @@ int main(void)
 
 }
 
-void multiply(int matrixA[10][10], int matrixB[10][10], int result[10][10], int m1, int n1, int m2, int n2)
+void multiply(int matrixA[10][10], int matrixB[10][10], int result[10][10], int first_row, int first_column, int second_row, int second_column)
 {
     int i, j, k;
 
-    for (i = 0; i < m1; i++)
+    for (i = 0; i < first_row; i++)
     {
-        for (j = 0; j < n2; j++)
+        for (j = 0; j < second_column; j++)
         {
             result[i][j] = 0;
         }
     }
 
-    for (i = 0; i < m1; i++)
+    for (i = 0; i < first_row; i++)
     {
-        for (j = 0; j < n2; j++)
+        for (j = 0; j < second_column; j++)
         {
-            for (k = 0; k < n1; k++)
+            for (k = 0; k < first_column; k++)
             {
                 result[i][j] += matrixA[i][k] * matrixB[k][j];
 
