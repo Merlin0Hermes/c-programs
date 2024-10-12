@@ -33,7 +33,7 @@ int main(void)
 
 
     printf("Enter first matrix: \n");
-    get_matrix(matrixA, m1, n2);
+    get_matrix(matrixA, m1, n1);
 
     printf("Enter second matrix: \n");
     get_matrix(matrixB, m2, n2);
