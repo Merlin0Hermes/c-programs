@@ -1,3 +1,5 @@
+/*Adds two given matrices*/
+
 #include <stdio.h>
 
 void get_matrix(int matrix[10][10], int m, int n);
