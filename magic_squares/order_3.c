@@ -2,6 +2,7 @@
 #define SIZE 3
 
 void print_matrix(int matrix[SIZE][SIZE]);
+void set_zero_matrix(int matrix[SIZE][SIZE]);
 
 int main(void)
 {
@@ -46,10 +47,10 @@ int main(void)
         row--;
     
     }
-
-
+    print_matrix(matrix);
 
 }
+
 
 void print_matrix(int matrix[SIZE][SIZE])
 {
@@ -61,5 +62,17 @@ void print_matrix(int matrix[SIZE][SIZE])
             printf("%d\t", matrix[i][j]);
         }
         printf("\n");
+    }
+}
+
+void set_zero_matrix(int matrix[SIZE][SIZE])
+{
+    int i, j;
+    for (i = 0; i < SIZE; i++)
+    {
+        for (j = 0; j < SIZE; j++)
+        {
+            matrix[i][j] = 0;
+        }
     }
 }
