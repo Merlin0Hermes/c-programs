@@ -1,6 +1,8 @@
 #include <stdio.h>
 #define SIZE 3
 
+void print_matrix(int matrix[SIZE][SIZE]);
+
 int main(void)
 {
 
@@ -15,6 +17,7 @@ int main(void)
         }
     }
     row = 0;
+    max = SIZE - 1; min = 0;
 
 
     for (n = col = 1; n <= 9; n++)
@@ -26,11 +29,11 @@ int main(void)
         }
         else if (row < 0)
         {
-            row = 2;
+            row = max;
         }
         else if (col > 2)
         {
-            col = 0;
+            col = min;
         }
         else if (matrix[row][col] != 0)
         {
@@ -44,13 +47,19 @@ int main(void)
     
     }
 
-    for (row = 0; row < SIZE; row++)
+
+
+}
+
+void print_matrix(int matrix[SIZE][SIZE])
+{
+    int i, j;
+    for (i = 0; i < SIZE; i++)
     {
-        for (col = 0; col < SIZE; col++)
+        for (j = 0; j < SIZE; j++)
         {
-            printf("%d\t", matrix[row][col]);
+            printf("%d\t", matrix[i][j]);
         }
         printf("\n");
     }
-
 }
