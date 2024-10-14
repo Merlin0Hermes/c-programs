@@ -10,17 +10,11 @@ int main(void)
     int row, col, n, max, min;
     int matrix[SIZE][SIZE];
 
-    for (row = 0; row < SIZE; row++)
-    {
-        for (col = 0; col < SIZE; col++)
-        {
-            matrix[row][col] = 0;
-        }
-    }
+    set_zero_matrix(matrix);
+
     row = 0;
     max = SIZE - 1; min = 0;
-
-
+    
     for (n = col = 1; n <= 9; n++)
     {
         if (row < 0 && col > 2)
