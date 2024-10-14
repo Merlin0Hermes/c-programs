@@ -4,55 +4,51 @@
 int main(void)
 {
 
-    int i, j, n, max, min;
+    int row, col, n, max, min;
     int matrix[SIZE][SIZE];
 
-    for (i = 0; i < SIZE; i++)
+    for (row = 0; row < SIZE; row++)
     {
-        for (j = 0; j < SIZE; j++)
+        for (col = 0; col < SIZE; col++)
         {
-            matrix[i][j] = 0;
+            matrix[row][col] = 0;
         }
     }
-    i = 0;
+    row = 0;
 
 
-    for (n = j = 1; n <= 9; n++)
+    for (n = col = 1; n <= 9; n++)
     {
-        if (i < 0 && j > 2)
+        if (row < 0 && col > 2)
         {
-            i += 2;
-            j--;
-
+            row += 2;
+            col--;
         }
-        else if (i < 0)
+        else if (row < 0)
         {
-            i = 2;
+            row = 2;
         }
-        else if (j > 2)
+        else if (col > 2)
         {
-            j = 0;
+            col = 0;
         }
-        else if (matrix[i][j] != 0)
+        else if (matrix[row][col] != 0)
         {
-            i += 2;
-            j--;
+            row += 2;
+            col--;
         }
            
-        matrix[i][j] = n;    
-        j++;
-        i--;
+        matrix[row][col] = n;    
+        col++;
+        row--;
     
-    
-
-
     }
 
-    for (i = 0; i < SIZE; i++)
+    for (row = 0; row < SIZE; row++)
     {
-        for (j = 0; j < SIZE; j++)
+        for (col = 0; col < SIZE; col++)
         {
-            printf("%d\t", matrix[i][j]);
+            printf("%d\t", matrix[row][col]);
         }
         printf("\n");
     }
