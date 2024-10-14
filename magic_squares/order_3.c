@@ -15,7 +15,7 @@ int main(void)
     row = 0;
     max = SIZE - 1; min = 0;
 
-    for (n = col = 1; n <= 9; n++)
+    for (n = col = 1; n <= SIZE * SIZE; n++)
     {
         if (row < min && col > max)
         {
