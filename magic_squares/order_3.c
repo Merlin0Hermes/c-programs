@@ -11,13 +11,13 @@ int main(void)
     int matrix[SIZE][SIZE];
 
     set_zero_matrix(matrix);
-
+    
     row = 0;
     max = SIZE - 1; min = 0;
-    
+
     for (n = col = 1; n <= 9; n++)
     {
-        if (row < 0 && col > 2)
+        if (row < min && col > max)
         {
             row += 2;
             col--;
