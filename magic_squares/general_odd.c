@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define SIZE 3
+#define SIZE 9 
 
 void print_matrix(int matrix[SIZE][SIZE]);
 void set_zero_matrix(int matrix[SIZE][SIZE]);
@@ -7,26 +7,28 @@ void set_zero_matrix(int matrix[SIZE][SIZE]);
 int main(void)
 {
 
-    int row, col, n, max, min;
+    int row, col, n, max, min, mid;
     int matrix[SIZE][SIZE];
 
     set_zero_matrix(matrix);
     
     row = 0;
     max = SIZE - 1; min = 0;
+    mid = SIZE / 2;
 
-    for (n = col = 1; n <= 9; n++)
+    col = mid;
+    for (n = 1; n <= SIZE * SIZE; n++)
     {
         if (row < min && col > max)
         {
             row += 2;
             col--;
         }
-        else if (row < 0)
+        else if (row < min)
         {
             row = max;
         }
-        else if (col > 2)
+        else if (col > max)
         {
             col = min;
         }
