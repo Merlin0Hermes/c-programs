@@ -4,6 +4,15 @@ int gcd(int num1, int num2);
 
 int main(void)
 {
+    int num, denom, divisor;
+    
+    printf("Enter a fraction: ");
+    scanf("%d/%d", &num, &denom);
+
+    divisor = gcd(num, denom);
+
+    printf("In lowest terms: %d/%d\n", num / divisor, denom / divisor);
+    
 }
 
 int gcd(int num1, int num2)
