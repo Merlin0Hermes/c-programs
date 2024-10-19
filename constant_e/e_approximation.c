@@ -15,10 +15,12 @@ int main(void)
 
     for (i = 1; i <= num; i++)
     {
-        if ((temp = 1.0 / factorial(i)) > epsilon)
+        temp = 1.0 / factorial(i);
+        if (temp < epsilon)
         {
-            e += temp;            
+            break;       
         }
+        e += temp;
     }
     printf("e is %f\n", e);
 
