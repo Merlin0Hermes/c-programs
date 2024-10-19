@@ -5,15 +5,20 @@ long factorial(long n);
 int main(void)
 {
     int num, i;
-    double e = 1.0;
+    double e = 1.0, epsilon, temp;
 
     printf("Enter number: ");
     scanf("%d", &num);
 
+    printf("Enter epsilon: ");
+    scanf("%lf", &epsilon);
+
     for (i = 1; i <= num; i++)
     {
-        e += 1.0 / factorial(i);
-
+        if ((temp = 1.0 / factorial(i)) > epsilon)
+        {
+            e += temp;            
+        }
     }
     printf("e is %f\n", e);
 
