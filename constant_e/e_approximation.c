@@ -22,7 +22,7 @@ int main(void)
         }
         e += temp;
     }
-    printf("e is %f\n", e);
+    printf("e is %.2f\n", e);
 
 }
 
