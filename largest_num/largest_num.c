@@ -20,5 +20,5 @@ int main(void)
             max = number;
         }
     }
-
+    printf("Largest number: %d\n", max);
 }
