@@ -33,7 +33,7 @@ int main(void)
         for (j = 0; j < n; j++)
         {
             matrix_sum[i][j] = 0;
-            matrix_sum[i][j] += matrixA[i][j] + matrixB[i][j];
+            matrix_sum[i][j] = matrixA[i][j] + matrixB[i][j];
         }
     }
 
