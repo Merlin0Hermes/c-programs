@@ -42,7 +42,7 @@ int main(void)
     {
         for (j = 0; j < n; j++)
         {
-            printf("%d\t", matrix_sum[i][j]);
+            printf("%3d\t", matrix_sum[i][j]);
         }
         printf("\n");
     }
