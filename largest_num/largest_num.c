@@ -3,22 +3,22 @@
 
 int main(void)
 {
-    int number, max;
+    float number, max;
 
 
     printf("Enter a number: ");
-    scanf("%d", &number); 
+    scanf("%f", &number); 
     max = number; 
 
     while (number > 0)
     {
         printf("Enter a number: ");
-        scanf("%d", &number);  
+        scanf("%f", &number);  
 
         if (number > max)
         {
             max = number;
         }
     }
-    printf("Largest number: %d\n", max);
+    printf("Largest number: %.2f\n", max);
 }
