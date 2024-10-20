@@ -9,7 +9,9 @@ void print_matrix(int matrix[N][N], int row, int col);
 int main(void)
 {
     int matrix[N][N], row, col, i;
-    row = col = 3;
+
+    printf("Enter number of rows and columns (m n): ");
+    scanf("%d %d", &row, &col);
 
     get_matrix(matrix, row, col);
 
