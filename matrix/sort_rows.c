@@ -2,27 +2,33 @@
 #define N 10
 
 void bubble_sort(int array[N], int n);
-void get_matrix(int matrix[N][N], int m, int n);
-void print_matrix(int matrix[N][N], int m, int n);
+void get_matrix(int matrix[N][N], int row, int col);
+void print_matrix(int matrix[N][N], int row, int col);
 
 
 int main(void)
 {
-    int matrix[N][N], m, n;
-    m = n = 3;
+    int matrix[N][N], row, col, i;
+    row = col = 3;
 
-    get_matrix(matrix, m, n);
+    get_matrix(matrix, row, col);
+
+    for (i = 0; i < row; i++)
+    {
+        bubble_sort(matrix[i], col);
+    }
+    print_matrix(matrix, row, col);
 
     
 }
 
-void get_matrix(int matrix[N][N], int m, int n)
+void get_matrix(int matrix[N][N], int row, int col)
 {
     int i, j;
 
-    for (i = 0; i < m; i++)
+    for (i = 0; i < row; i++)
     {
-        for (j = 0; j < n; j++)
+        for (j = 0; j < col; j++)
         {
             printf("Enter element of row %d column %d: ", i + 1, j + 1);
             scanf("%d", &matrix[i][j]);
@@ -30,12 +36,12 @@ void get_matrix(int matrix[N][N], int m, int n)
     }
 }
 
-void print_matrix(int matrix[N][N], int m, int n)
+void print_matrix(int matrix[N][N], int row, int col)
 {
     int i, j;
-    for (i = 0; i < m; i++)
+    for (i = 0; i < row; i++)
     {
-        for (j = 0; j < n; j++)
+        for (j = 0; j < col; j++)
         {
             printf("%d\t", matrix[i][j]);
         }
