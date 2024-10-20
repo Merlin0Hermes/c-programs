@@ -2,18 +2,24 @@
 #define SIZE 10
 
 void get_matrix(int matrix[SIZE][SIZE], int m, int n);
-void min_element(int matrix[SIZE][SIZE], int m, int n);
+int min_element(int matrix[SIZE][SIZE], int m, int n);
 
 int main(void)
 {
-    int row, col;
+    int row, col, matrix[SIZE][SIZE], min;
     printf("Enter size of matrix (rows columns): ");
     scanf("%d %d", &row, &col);
 
+    printf("Enter matrix: \n");
+    get_matrix(matrix, row, col);
 
+    min = min_element(matrix, row, col);
+    printf("Minimum element is : %d\n", min);
+
+    return 0;
 }
 
-void min_element(int matrix[SIZE][SIZE], int m, int n)
+int min_element(int matrix[SIZE][SIZE], int m, int n)
 {
     int i, j, min;
     min = matrix[0][0];
