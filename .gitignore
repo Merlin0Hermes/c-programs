@@ -1,7 +1,7 @@
 *.o
 *.out
 *.exe
-test.c
+test.*
 .vscode
 test
 Makefile
