@@ -1,7 +1,7 @@
 /*Multiplies two matrices*/
 #include <stdio.h>
+#include "matrix.h"
 
-void get_matrix(int matrix[10][10], int m, int n);
 void multiply(int matrixA[10][10], int matrixB[10][10], int result[10][10], 
                 int first_row, int first_column, int second_row, int second_column);
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
+#include "matrix.h"
 #define SIZE 10
 
-void get_matrix(int matrix[SIZE][SIZE], int m, int n);
 int min_element(int matrix[SIZE][SIZE], int m, int n);
 
 int main(void)

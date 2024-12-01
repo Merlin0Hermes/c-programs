@@ -1,8 +1,8 @@
 /*Finds determinant of a given matrix*/
 /*Work in progress*/
 #include <stdio.h>
+#include "matrix.h"
 
-void get_matrix(int matrix[10][10], int n);
 int determinant(int matrix[10][10], int n);
 
 

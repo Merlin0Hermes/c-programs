@@ -1,8 +1,8 @@
 #include <stdio.h>
+#include "matrix.h"
 #define N 10
 
 void bubble_sort(int array[N], int n);
-void get_matrix(int matrix[N][N], int row, int col);
 void print_matrix(int matrix[N][N], int row, int col);
 
 
