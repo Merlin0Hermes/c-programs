@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include "matrix.h"
 
-void get_matrix(int matrix[10][10], int m, int n);
 
 
 int main(void)
